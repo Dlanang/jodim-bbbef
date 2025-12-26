@@ -64,7 +64,7 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Blog kisah hidup dan percintaan Jovita & Dhimas. Cerita, perjalanan, dan inspirasi cinta."
     author: ["Jovita", "Dhimas"]
-    disqusShortname: "blog-fix3h4syi9"
+    #disqusShortname: "blog-fix3h4syi9"
     # author: ["Me", "You"] # multiple authors
 
     defaultTheme: auto
@@ -144,7 +144,7 @@ markup:
 services:
   disqus:
     shortname: "blog-fix3h4syi9"
-    
+
 privacy:
     vimeo:
         disabled: false
