@@ -81,6 +81,7 @@ params:
     comments: true
     images: ["papermod-cover.png"]
 
+
     profileMode:
         enabled: false
         title: PaperMod
@@ -140,6 +141,10 @@ markup:
         # lineNos: true
         # style: monokai
 
+services:
+  disqus:
+    shortname: "blog-fix3h4syi9"
+    
 privacy:
     vimeo:
         disabled: false
