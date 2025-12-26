@@ -64,7 +64,7 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Blog kisah hidup dan percintaan Jovita & Dhimas. Cerita, perjalanan, dan inspirasi cinta."
     author: ["Jovita", "Dhimas"]
-    #disqusShortname: "blog-fix3h4syi9"
+    disqusShortname: "blog-fix3h4syi9"
     # author: ["Me", "You"] # multiple authors
 
     defaultTheme: auto
@@ -109,9 +109,9 @@ params:
           url: "index.xml"
 
     editPost:
-      URL: "https://github.com/dlanang/jodim-bbbef/tree/main/content"
-      Text: "Usulkan Perubahan" # edit text
-      appendFilePath: true # to append file path to Edit link
+    # URL: "https://github.com/dlanang/jodim-bbbef/tree/main/content"
+    #  Text: "Usulkan Perubahan" # edit text
+    #  appendFilePath: true # to append file path to Edit link
     #     apple_touch_icon: "<link / abs url>"
     #     safari_pinned_tab: "<link / abs url>"
 
@@ -141,9 +141,9 @@ markup:
         # lineNos: true
         # style: monokai
 
-services:
-  disqus:
-    shortname: "blog-fix3h4syi9"
+#services:
+#  disqus:
+#    shortname: "blog-fix3h4syi9"
 
 privacy:
     vimeo:
