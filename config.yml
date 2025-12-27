@@ -26,9 +26,9 @@ languages:
     languageName: "Bahasa Indonesia"
     weight: 1  # UBAH weight MENJADI 1
     taxonomies:
-      category: kategori
-      tag: tagar
-      series: seri
+      category: categories
+      tag: tags
+      series: seris
     menu:
       main:
         - name: Arsip
