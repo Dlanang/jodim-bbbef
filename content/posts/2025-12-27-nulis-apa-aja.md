@@ -25,4 +25,4 @@ ShowWordCount: false
 ShowRssButtonInSectionTermList: false
 UseHugoToc: false
 ---
-D﻿isuruh my ayank nulis apa aja
+D﻿isuruh my ayank nulis apa aja. Hmmm...
