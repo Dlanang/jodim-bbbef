@@ -45,7 +45,7 @@ collections:
       - { label: "Show TOC", name: "showToc", widget: "boolean", default: false, required: false}
       - { label: "TOC Open", name: "TocOpen", widget: "boolean", default: false, required: false}
       - { label: "Hide Metadata", name: "hidemeta", widget: "boolean", default: false, required: false}
-      - { label: "Enable Comments", name: "comments", widget: "boolean", default: false, required: false}
+      - { label: "Enable Comments", name: "comments", widget: "boolean", default: true, required: false}
       - { label: "Disable Highlight.JS", name: "disableHLJS", widget: "boolean", default: false, required: false}
       - { label: "Disable Share", name: "disableShare", widget: "boolean", default: false, required: false}
       - { label: "Hide Summary", name: "hideSummary", widget: "boolean", default: false, required: false}
@@ -56,3 +56,10 @@ collections:
       - { label: "ShowWordCount", name: "ShowWordCount", widget: "boolean", default: false, required: false}
       - { label: "ShowRssButtonInSectionTermList", name: "ShowRssButtonInSectionTermList", widget: "boolean", default: false, required: false}
       - { label: "UseHugoToc", name: "UseHugoToc", widget: "boolean", default: false, required: false}
+
+      - label: "Author"
+        name: "author"
+        widget: "select"
+        options: ["Jovita", "Dhimas", "Jovita & Dhimas"]
+        default: "Jovita & Dhimas"
+        required: true
