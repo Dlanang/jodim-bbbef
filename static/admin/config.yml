@@ -18,6 +18,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "date" }
+      - { label: "Author", name: "author", widget: "select", options: ["Jovita", "Dhimas", "Jovita & Dhimas"], required: true }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Categories", name: "categories", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -57,9 +58,3 @@ collections:
       - { label: "ShowRssButtonInSectionTermList", name: "ShowRssButtonInSectionTermList", widget: "boolean", default: false, required: false}
       - { label: "UseHugoToc", name: "UseHugoToc", widget: "boolean", default: false, required: false}
 
-      - label: "Author"
-        name: "author"
-        widget: "select"
-        options: ["Jovita", "Dhimas", "Jovita & Dhimas"]
-        default: "Jovita & Dhimas"
-        required: true
