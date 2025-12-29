@@ -18,7 +18,7 @@ googleAnalytics: G-0XQKYH4KYS
 
 minify:
     disableXML: true
-    minifyOutput: true
+    #minifyOutput: true
 
 # UBAH URUTAN languages: id DULU
 languages:
