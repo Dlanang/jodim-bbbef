@@ -73,7 +73,7 @@ params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     description: "Blog kisah hidup dan percintaan Jovita & Dhimas. Cerita, perjalanan, dan inspirasi cinta."
     author: ["Jovita", "Dhimas"]
-    lazyLoadImages: true
+    #lazyLoadImages: true
 
     defaultTheme: auto
     # disableThemeToggle: true
