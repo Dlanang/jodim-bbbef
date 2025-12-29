@@ -64,6 +64,10 @@ outputs:
         - HTML
         - RSS
         - JSON
+sitemap:
+  changefreq: "weekly"
+  priority: 0.5
+  filename: sitemap.xml
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
