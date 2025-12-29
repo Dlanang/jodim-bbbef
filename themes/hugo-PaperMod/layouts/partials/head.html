@@ -10,7 +10,7 @@
 {{- /* Title */}}
 <title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
 
-{{- /* Meta */}}
+{{- /* Meta General */}}
 {{- if .IsHome }}
 {{ with .Site.Params.keywords -}}<meta name="keywords" content="{{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}" />{{ end }}
 {{- else }}
@@ -22,7 +22,15 @@
     {{- .Summary | default (printf "%s - %s" .Title  .Site.Title) }}{{- else }}
     {{- with .Site.Params.description }}{{ . }}{{- end }}{{- end }}{{- end -}}">
 <meta name="author" content="{{ (partial "author.html" . ) }}">
-<link rel="canonical" href="{{ .Params.canonicalURL | default .Permalink }}">
+
+{{- /* SEO: Canonical & Hreflang (FIXED) */}}
+<link rel="canonical" href="{{ .Params.canonicalURL | default .Permalink | absURL }}">
+
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink | absURL }}" />
+{{- end }}
+
+{{- /* Verification Tags */}}
 {{- if .Site.Params.analytics.google.SiteVerificationTag }}
 <meta name="google-site-verification" content="{{ .Site.Params.analytics.google.SiteVerificationTag }}" />
 {{- end }}
@@ -107,12 +115,9 @@
 {{- /* Generator */}}
 {{ hugo.Generator }}
 
-{{- /* RSS */}}
+{{- /* RSS & Translations */}}
 {{ range .AlternativeOutputFormats -}}
-<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | safeURL }}">
-{{ end -}}
-{{- range .AllTranslations -}}
-<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}" />
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type | html }}" href="{{ .Permalink | absURL }}">
 {{ end -}}
 
 <noscript>
@@ -157,7 +162,7 @@
 
 {{- partial "extend_head.html" . -}}
 
-{{- /* Misc */}}
+{{- /* Analytics & Schemas */}}
 {{- if hugo.IsProduction | or (eq .Site.Params.env "production") }}
 {{- template "_internal/google_analytics.html" . }}
 {{- template "partials/templates/opengraph.html" . }}

@@ -1,4 +1,4 @@
-baseURL: "/"
+baseURL: "https://jovitadhimas.netlify.app/"
 title: "Jovita & Dhimas"
 paginate: 5
 theme: hugo-PaperMod
